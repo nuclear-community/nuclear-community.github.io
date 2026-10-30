@@ -1,0 +1,280 @@
+/* ── Nuclear Science & Engineering Community — website ─────────────── */
+/* No frameworks, no dependencies. System fonts, dark theme, one file. */
+
+:root {
+  --bg: #0a0e14;
+  --bg-alt: #0e141d;
+  --surface: #111823;
+  --border: #1e2937;
+  --text: #d8e1ec;
+  --text-dim: #8b99ab;
+  --accent: #3fb950;
+  --accent-soft: rgba(63, 185, 80, 0.14);
+  --accent-glow: rgba(63, 185, 80, 0.45);
+  --link: #58a6ff;
+  --radius: 12px;
+  --max-width: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: min(var(--max-width), 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.25; letter-spacing: -0.01em; }
+h2 { font-size: 1.75rem; margin: 0 0 0.4rem; }
+h3 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+
+/* ── Atom logo ─────────────────────────────────────────────────────── */
+
+.atom {
+  position: relative;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  flex: none;
+}
+.atom .orbit {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  opacity: 0.85;
+}
+.atom .o1 { transform: rotate(0deg) scaleY(0.42); }
+.atom .o2 { transform: rotate(60deg) scaleY(0.42); }
+.atom .o3 { transform: rotate(120deg) scaleY(0.42); }
+.atom .nucleus {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 7px; height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow), 0 0 22px var(--accent-glow);
+  animation: pulse 3.2s ease-in-out infinite;
+}
+.atom-large { width: 84px; height: 84px; margin-bottom: 1.25rem; }
+.atom-large .orbit { border-width: 2px; }
+.atom-large .nucleus {
+  width: 16px; height: 16px; margin: -8px 0 0 -8px;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 8px var(--accent-glow), 0 0 18px var(--accent-glow); }
+  50%      { box-shadow: 0 0 14px var(--accent-glow), 0 0 34px var(--accent-glow); }
+}
+
+/* ── Header / nav ──────────────────────────────────────────────────── */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(10, 14, 20, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--text);
+  font-weight: 700;
+}
+.brand:hover { text-decoration: none; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a { color: var(--text-dim); font-size: 0.95rem; }
+.nav-links a:hover { color: var(--text); text-decoration: none; }
+
+/* ── Buttons ───────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+.btn:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-1px); }
+.btn-small { padding: 0.45rem 1rem; font-size: 0.85rem; }
+.btn-primary {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: #7ee787;
+}
+.btn-primary:hover { background: rgba(63, 185, 80, 0.24); }
+
+/* ── Hero ──────────────────────────────────────────────────────────── */
+
+.hero {
+  padding: 5.5rem 0 5rem;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 60% 45% at 50% -5%, var(--accent-soft), transparent 70%),
+    var(--bg);
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  margin: 0 0 1rem;
+  max-width: 21ch;
+  margin-inline: auto;
+}
+.hero .accent { color: var(--accent); }
+.lead {
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  max-width: 62ch;
+  margin: 0 auto 2rem;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2.25rem;
+}
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+.hero-facts strong { color: var(--text); }
+
+/* ── Sections ──────────────────────────────────────────────────────── */
+
+.section { padding: 4rem 0; }
+.section-alt { background: var(--bg-alt); border-block: 1px solid var(--border); }
+.section-lead {
+  color: var(--text-dim);
+  max-width: 60ch;
+  margin: 0 0 2.25rem;
+}
+
+/* ── Cards ─────────────────────────────────────────────────────────── */
+
+.grid { display: grid; gap: 1.1rem; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.card:hover { border-color: #2c3c50; transform: translateY(-2px); }
+.card p { margin: 0 0 1rem; color: var(--text-dim); font-size: 0.95rem; }
+.card-icon { font-size: 1.6rem; margin-bottom: 0.6rem; }
+.card-link { font-weight: 600; font-size: 0.9rem; }
+.repo-card h3 { font-size: 1.15rem; }
+
+/* ── Learning path ─────────────────────────────────────────────────── */
+
+.path {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+.path a {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.95rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.path a:hover { text-decoration: none; border-color: var(--accent); transform: translateX(4px); }
+.step-no {
+  font-weight: 700;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.path strong { display: block; }
+.path small { color: var(--text-dim); }
+
+/* ── Join ──────────────────────────────────────────────────────────── */
+
+.join {
+  text-align: center;
+  background:
+    radial-gradient(ellipse 55% 60% at 50% 110%, var(--accent-soft), transparent 70%),
+    var(--bg);
+}
+.join-inner .section-lead { margin-inline: auto; }
+
+/* ── Footer ────────────────────────────────────────────────────────── */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0 3rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+.footer-inner { display: grid; gap: 0.4rem; }
+.fineprint a { color: var(--text-dim); text-decoration: underline; }
+.fineprint a:hover { color: var(--text); }
+
+/* ── Responsive ────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .nav-links { gap: 0.9rem; }
+  .nav-links a:not(.btn) { display: none; }
+  .hero { padding: 3.5rem 0 3.5rem; }
+  .section { padding: 3rem 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .atom .nucleus { animation: none; }
+  .card, .btn, .path a { transition: none; transform: none; }
+}
