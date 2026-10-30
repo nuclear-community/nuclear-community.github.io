@@ -7,7 +7,7 @@ Source of the [Nuclear Science & Engineering Community](https://github.com/nucle
 Deliberately boring and dependency-free:
 
 - Plain HTML (`index.html`)
-- One stylesheet (`styles.css`)
+- One stylesheet (`styles.css`) — clean, Apple-inspired light design: white canvas, single blue accent, large type, hairline dividers
 - No build step, no JavaScript, no external fonts or frameworks
 
 This keeps the site fast, trivial to host, and editable by anyone who knows basic HTML/CSS — which is exactly the point for a community site.
