@@ -21,7 +21,7 @@
         <li><a href="#learn">Learn</a></li>
         <li><a href="#focus">Topics</a></li>
         <li><a href="#repos">Projects</a></li>
-        <li><a href="#join" class="btn btn-small btn-primary">Join us</a></li>
+        <li><a href="#join" class="nav-cta">Join us</a></li>
       </ul>
     </nav>
   </header>
@@ -30,52 +30,27 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero-inner">
-        <span class="atom atom-hero" aria-hidden="true"><span class="orbit o1"></span><span class="orbit o2"></span><span class="orbit o3"></span><span class="nucleus"></span></span>
+      <div class="container">
         <h1>Nuclear science,<br>open to everyone.</h1>
         <p class="lead">
           A volunteer-run community building free learning paths, curated resources,
-          and open-source projects about nuclear science and engineering —
-          from the nucleus of an atom to the safety case of a power reactor.
+          and open-source projects — from the nucleus of an atom to the safety
+          case of a power reactor.
         </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="https://github.com/nuclear-community/nuclear-101">Start learning</a>
-          <a class="link-chevron" href="https://github.com/nuclear-community/resources">Browse resources&nbsp;<span aria-hidden="true">›</span></a>
-        </div>
-        <p class="hero-note">Free and open&nbsp;·&nbsp;No degree required&nbsp;·&nbsp;Built by the community</p>
+        <p class="hero-links">
+          <a class="chev-link" href="https://github.com/nuclear-community/nuclear-101">Start learning&nbsp;<span aria-hidden="true">›</span></a>
+          <a class="chev-link" href="https://github.com/nuclear-community/resources">Browse resources&nbsp;<span aria-hidden="true">›</span></a>
+          <a class="chev-link" href="#join">Get involved&nbsp;<span aria-hidden="true">›</span></a>
+        </p>
+        <p class="hero-note">Free and open.<sup>1</sup>&nbsp;&nbsp;No degree required.<sup>2</sup></p>
       </div>
     </section>
 
-    <!-- Mission -->
-    <section id="mission" class="section section-alt">
+    <!-- Learning path: black band -->
+    <section id="learn" class="band band-dark">
       <div class="container">
-        <h2 class="center">Our mission.</h2>
-        <p class="section-lead center">Quality nuclear education is scattered, expensive, or locked away. We’re fixing that — together.</p>
-        <div class="grid grid-3">
-          <article class="card">
-            <h3>Learn</h3>
-            <p>A structured self-study path takes you from atomic structure to reactor safety, with curated free materials at every step.</p>
-            <a class="link-chevron" href="https://github.com/nuclear-community/nuclear-101">nuclear-101&nbsp;<span aria-hidden="true">›</span></a>
-          </article>
-          <article class="card">
-            <h3>Share</h3>
-            <p>The best textbooks, lecture series, tools, and datasets — collected, annotated, and organized by level, so you start in the right place.</p>
-            <a class="link-chevron" href="https://github.com/nuclear-community/resources">resources&nbsp;<span aria-hidden="true">›</span></a>
-          </article>
-          <article class="card">
-            <h3>Build</h3>
-            <p>Simulators, visualizations, study tools — community projects where you can practice, contribute code, and collaborate.</p>
-            <a class="link-chevron" href="https://github.com/nuclear-community/projects">projects&nbsp;<span aria-hidden="true">›</span></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learning path -->
-    <section id="learn" class="section">
-      <div class="container">
-        <h2 class="center">The learning path.</h2>
-        <p class="section-lead center">Eight modules, in order — each one a self-contained guide with key concepts, free resources, and self-check questions.</p>
+        <h2>The learning path.</h2>
+        <p class="band-lead">Eight modules, in order. Each one is a self-contained guide — objectives, key concepts, curated free resources, and self-check questions.</p>
         <ol class="path">
           <li><a href="https://github.com/nuclear-community/nuclear-101/tree/main/modules/01-nuclear-physics-foundations"><span class="step-no">01</span><span class="step-body"><strong>Nuclear physics foundations</strong><small>Atoms, nuclei, binding energy, radioactive decay</small></span><span class="chev" aria-hidden="true">›</span></a></li>
           <li><a href="https://github.com/nuclear-community/nuclear-101/tree/main/modules/02-nuclear-reactions"><span class="step-no">02</span><span class="step-body"><strong>Nuclear reactions &amp; cross sections</strong><small>Neutron interactions, fission, fusion</small></span><span class="chev" aria-hidden="true">›</span></a></li>
@@ -89,73 +64,105 @@
       </div>
     </section>
 
-    <!-- Focus areas -->
-    <section id="focus" class="section section-alt">
+    <!-- Mission: editorial statements -->
+    <section id="mission" class="band">
       <div class="container">
-        <h2 class="center">What we cover.</h2>
-        <div class="grid grid-3">
-          <article class="card"><h3>Nuclear physics</h3><p>Atomic &amp; nuclear structure, radioactivity, decay chains, fission and fusion.</p></article>
-          <article class="card"><h3>Reactor physics</h3><p>Neutron transport, moderation, criticality, kinetics, burnup and poisons.</p></article>
-          <article class="card"><h3>Thermal-hydraulics</h3><p>Heat generation and removal, coolant behavior, passive safety systems.</p></article>
-          <article class="card"><h3>Radiation protection</h3><p>Detection, dosimetry, shielding, and the ALARA principle in practice.</p></article>
-          <article class="card"><h3>Fuel cycle &amp; waste</h3><p>From mining and enrichment to spent fuel management and disposal.</p></article>
-          <article class="card"><h3>Safety &amp; society</h3><p>Safety culture, regulation, nonproliferation, and public communication.</p></article>
+        <h2>Three things we do.</h2>
+        <div class="statements">
+          <div class="statement">
+            <p class="statement-word">Learn.</p>
+            <p class="statement-body">A structured self-study path takes you from atomic structure to reactor safety, with curated free materials at every step — built by the community, for the community.</p>
+          </div>
+          <div class="statement">
+            <p class="statement-word">Share.</p>
+            <p class="statement-body">The best textbooks, lecture series, tools, and datasets — collected, annotated, and organized by level, so the next person starts in the right place.</p>
+          </div>
+          <div class="statement">
+            <p class="statement-word">Build.</p>
+            <p class="statement-body">Simulators, visualizations, study tools — open-source projects where you practice, contribute, and collaborate with people who love the same subject.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Repos -->
-    <section id="repos" class="section">
+    <!-- Topics: editorial two-column list -->
+    <section id="focus" class="band band-tinted">
       <div class="container">
-        <h2 class="center">Explore our repositories.</h2>
-        <div class="grid grid-2">
-          <article class="card card-tinted">
-            <h3>nuclear-101</h3>
-            <p>A structured self-study path through nuclear science and engineering — eight modules from atomic structure to reactor safety, each with objectives, curated resources, and self-check questions.</p>
-            <a class="btn btn-small" href="https://github.com/nuclear-community/nuclear-101">Open repository</a>
-          </article>
-          <article class="card card-tinted">
-            <h3>resources</h3>
-            <p>The community’s curated library: textbooks, free online courses, simulation tools, nuclear data, organizations, journals, and news — annotated and organized by level.</p>
-            <a class="btn btn-small" href="https://github.com/nuclear-community/resources">Open repository</a>
-          </article>
-          <article class="card card-tinted">
-            <h3>projects</h3>
-            <p>The project incubator: propose an idea, find teammates, and build open-source tools — from decay-chain visualizers to reactor physics cheat sheets.</p>
-            <a class="btn btn-small" href="https://github.com/nuclear-community/projects">Open repository</a>
-          </article>
-          <article class="card card-tinted">
-            <h3>website</h3>
-            <p>The source of this website — plain HTML and CSS, no build step. Fix a typo or redesign a section; PRs welcome.</p>
-            <a class="btn btn-small" href="https://github.com/nuclear-community/nuclear-community.github.io">Open repository</a>
-          </article>
+        <h2>What we cover.</h2>
+        <div class="topics">
+          <div class="topic"><h3>Nuclear physics</h3><p>Atomic &amp; nuclear structure, radioactivity, decay chains, fission and fusion.</p></div>
+          <div class="topic"><h3>Reactor physics</h3><p>Neutron transport, moderation, criticality, kinetics, burnup and poisons.</p></div>
+          <div class="topic"><h3>Thermal-hydraulics</h3><p>Heat generation and removal, coolant behavior, passive safety systems.</p></div>
+          <div class="topic"><h3>Radiation protection</h3><p>Detection, dosimetry, shielding, and the ALARA principle in practice.</p></div>
+          <div class="topic"><h3>Fuel cycle &amp; waste</h3><p>From mining and enrichment to spent fuel management and disposal.</p></div>
+          <div class="topic"><h3>Safety &amp; society</h3><p>Safety culture, regulation, nonproliferation, and public communication.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Join -->
-    <section id="join" class="section join">
-      <div class="container join-inner">
-        <h2 class="center">Join the community.</h2>
-        <p class="section-lead center">Introduce yourself, ask questions, share what you’re learning — or roll up your sleeves and help us build.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="https://github.com/nuclear-community/.github/discussions">Say hi on GitHub</a>
-          <a class="link-chevron" href="https://github.com/nuclear-community/.github/blob/main/CONTRIBUTING.md">How to contribute&nbsp;<span aria-hidden="true">›</span></a>
-        </div>
+    <!-- Repositories: link list -->
+    <section id="repos" class="band">
+      <div class="container">
+        <h2>Our repositories.</h2>
+        <ul class="repo-list">
+          <li>
+            <a href="https://github.com/nuclear-community/nuclear-101">
+              <span class="repo-name">nuclear-101</span>
+              <span class="repo-desc">The learning path — eight modules from atomic structure to reactor safety, with objectives, curated resources, and self-check questions.</span>
+              <span class="chev" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/nuclear-community/resources">
+              <span class="repo-name">resources</span>
+              <span class="repo-desc">The curated library — textbooks, free courses, simulation tools, nuclear data, organizations, journals, and news.</span>
+              <span class="chev" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/nuclear-community/projects">
+              <span class="repo-name">projects</span>
+              <span class="repo-desc">The incubator — propose an idea, find teammates, and build open-source tools together.</span>
+              <span class="chev" aria-hidden="true">›</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/nuclear-community/nuclear-community.github.io">
+              <span class="repo-name">website</span>
+              <span class="repo-desc">The source of this page — plain HTML and CSS, no build step. PRs welcome.</span>
+              <span class="chev" aria-hidden="true">›</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Join: black band -->
+    <section id="join" class="band band-dark band-join">
+      <div class="container">
+        <h2>Join the community.</h2>
+        <p class="band-lead">Introduce yourself, ask questions, share what you’re learning — or roll up your sleeves and help us build.</p>
+        <p class="hero-links">
+          <a class="chev-link" href="https://github.com/nuclear-community/.github/discussions">Say hi on GitHub&nbsp;<span aria-hidden="true">›</span></a>
+          <a class="chev-link" href="https://github.com/nuclear-community/.github/blob/main/CONTRIBUTING.md">How to contribute&nbsp;<span aria-hidden="true">›</span></a>
+        </p>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-title">Nuclear Science &amp; Engineering Community</p>
-      <p class="fineprint">
-        Open, community-driven, and not affiliated with any company, regulator, or government body.<br>
-        Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a> ·
-        Code licensed <a href="https://github.com/nuclear-community/nuclear-community.github.io/blob/main/LICENSE">MIT</a> ·
+    <div class="container">
+      <ol class="footnotes">
+        <li>All content in our repositories is openly licensed — text as CC&nbsp;BY-SA&nbsp;4.0, code as MIT.</li>
+        <li>The learning path assumes only high-school physics and basic calculus. Everything else is built up along the way.</li>
+      </ol>
+      <p class="footer-links">
         <a href="https://github.com/nuclear-community">GitHub</a>
+        <a href="https://github.com/nuclear-community/.github/discussions">Discussions</a>
+        <a href="https://nuclear-community.github.io/">Website</a>
       </p>
+      <p class="footer-legal">Nuclear Science &amp; Engineering Community — open, community-driven, and not affiliated with any company, regulator, or government body.</p>
     </div>
   </footer>
 
